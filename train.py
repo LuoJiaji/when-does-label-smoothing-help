@@ -21,8 +21,8 @@ def train(args):
         train_dloader, test_dloader = load_cifar100(batch_size=args.batch_size, num_workers=args.num_workers, drop_last=args.drop_last)
     
     print("Creating Trainer...")
-    trainer = SupervisedTrainer(model, train_dloader, test_dloader, 
-                                label_smoothing=args.label_smoothing,
+    trainer = SupervisedTrainer(model, train_dloader, test_dloader, n_class=num_classes,
+                                label_smoothing=args.label_smoothing, alpha=args.alpha,
                                 learning_rate=args.lr, momentum=args.momentum, weight_decay=args.weight_decay)
     
     if args.load_checkpoint is not None:

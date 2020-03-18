@@ -13,7 +13,7 @@ tensorboardX
 
 ## Result
 
-I trained ResNet-18 on CIFAR-10 dataset, with and without label smoothing, and achieved 94.9% (without label smoothing) and 95.1% (with label smoothing) test accuracy.
+I trained ResNet-18 on CIFAR-10 dataset, with and without label smoothing. All train set is used for training, and test set is used for validation. The trained models achieved 94.9% (without label smoothing) and 95.1% (with label smoothing) on test set.
 
 Below is visualizations of penultimate layer of each models. (Note: this implementation of visualization may be incorrect.)
 
